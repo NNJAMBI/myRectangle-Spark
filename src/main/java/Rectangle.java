@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by staff on 7/10/17.
@@ -7,7 +9,7 @@ public class Rectangle {
     public int area;
     private int height;
     private int width;
-    private static ArrayList<Rectangle> mInstances = new ArrayList<>();
+    private static ArrayList<Rectangle> Instances = new ArrayList<Rectangle>();
     private Boolean shape;
 
     public Rectangle(int height, int width) {
@@ -15,7 +17,7 @@ public class Rectangle {
         this.width = width;
         this.shape = isRectSquare();
         this.area = area();
-        mInstances.add(this);
+        Instances.add(this);
     }
 
     public int getHeight() {
@@ -25,8 +27,8 @@ public class Rectangle {
     public int getWidth() {
         return width;
     }
-    public static ArrayList<Rectangle> getAll() {
-        return mInstances;
+    public static ArrayList<Rectangle> all() {
+        return Instances;
     }
 
     public int area() {

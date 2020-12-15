@@ -12,7 +12,7 @@ public class App {
 
         get("/", (req, res) -> {
             Map<String, ArrayList<Rectangle>> model = new HashMap<>();
-            ArrayList myRectangleArrayList = Rectangle.getAll();
+            ArrayList myRectangleArrayList = Rectangle.all();
             model.put("myRectangles", myRectangleArrayList);
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
